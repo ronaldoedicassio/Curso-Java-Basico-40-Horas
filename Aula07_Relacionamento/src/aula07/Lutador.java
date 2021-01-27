@@ -75,7 +75,7 @@ public class Lutador {
         setCategoria();
     }
 
-    private String getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
@@ -118,9 +118,9 @@ public class Lutador {
 
     public void apresentar() {
         System.out.println("Senhoras e Senhores !!!!");
-        System.out.println("Ele e de: " + this.nacionalidade);
-        System.out.println("Tem: " + this.idade + "anos");
-        System.out.println(this.altura + "de altura");
+        System.out.println("Nacionalidade: " + this.nacionalidade);
+        System.out.println("Tem: " + this.idade + " anos");
+        System.out.println(this.altura + " de altura");
         System.out.println("Pesando " + this.peso + "Kg");
         System.out.println("Ganhou " + this.vitorias);
         System.out.println("Perdeu: " + this.derrotas);
@@ -130,7 +130,7 @@ public class Lutador {
 
     public void status() {
         System.out.println("Nome: " + this.nome);
-        System.out.println("é um peso " + this.categoria);
+        System.out.println("é um peso " + this.peso);
         System.out.println("Ganhou " + this.vitorias);
         System.out.println("Perdeu: " + this.derrotas);
         System.out.println("Empate: " + this.empate);
