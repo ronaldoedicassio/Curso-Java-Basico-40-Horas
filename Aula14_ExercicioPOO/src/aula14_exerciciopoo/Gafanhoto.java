@@ -9,14 +9,17 @@ package aula14_exerciciopoo;
  *
  * @author Ronaldo
  */
-public class Gafanhoto extends Pessoa{
+public class Gafanhoto extends Pessoa {
+
     private String login;
     private int totAssitindo;
-    
-    public void viuMaiUm(){
-        this.totAssitindo++;
-    }
 
+    public Gafanhoto(String nome, int idade, String sexo, String login) {
+        super(nome, idade, sexo);
+        this.login = login;
+        this.totAssitindo = 0;
+    }
+    
     public String getLogin() {
         return login;
     }
@@ -32,5 +35,15 @@ public class Gafanhoto extends Pessoa{
     public void setTotAssitindo(int totAssitindo) {
         this.totAssitindo = totAssitindo;
     }
+
+    public void viuMaisUm() {
+        this.totAssitindo++;
+    }
+
+    @Override
+    public String toString() {
+        return "Gafanhoto{" + super.toString()+ "login=" + login + ", totAssitindo=" + totAssitindo + '}';
+    }
+    
     
 }

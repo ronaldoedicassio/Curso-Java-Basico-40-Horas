@@ -10,8 +10,9 @@ package aula09_projetoalunolivro;
  * @author Ronaldo
  */
 public class Pessoa {
+
     private String nome;
-    private int idade;    
+    private int idade;
     private String sexo;
 
     public String getNome() {
@@ -43,9 +44,9 @@ public class Pessoa {
         this.idade = idade;
         this.sexo = sexo;
     }
-    
-    public void fazerAniversario(){
+
+    public void fazerAniversario() {
         this.idade++;
     }
-    
+
 }
