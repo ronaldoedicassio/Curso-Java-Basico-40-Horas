@@ -182,7 +182,7 @@ public class CrudCompleto extends javax.swing.JFrame {
                 cursos.setCarga(Integer.parseInt(jTextFieldCarga.getText()));
                 cursos.setDescricao(jTextFieldDescricao.getText());
                 cursos.setTotalAulas(Integer.parseInt(jTextFieldTotalAulas.getText()));
-                cursos.setId(33);
+                cursos.setId(retonaUltIdCurso());
                 
                 cursoDao.criarRegistroBanco(cursos);
                 limpacampo();
@@ -202,8 +202,9 @@ public class CrudCompleto extends javax.swing.JFrame {
     }
     private int retonaUltIdCurso(){
         int id = 0;
-        
-        return id;
+        id = cursoDao.retornaMaxId();
+        System.out.println("id:" + id);
+        return id +1;
     }
     private boolean validaComposObrigatorios() {
         return (jTextFieldName.getText().equals("")
